@@ -1,0 +1,63 @@
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+
+public class Actionlisten extends JFrame implements ActionListener {
+
+    private JLabel l1, l2;
+    private JRadioButton r1t, r1f, r2t, r2f;
+    private ButtonGroup g1, g2;
+    private JButton ok;
+
+    Actionlisten() {
+        this.setSize(200, 200);
+        this.setResizable(false);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(new FlowLayout());
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+        l1 = new JLabel("5+5==10?");
+        l2 = new JLabel("5+5==11?");
+
+        r1t = new JRadioButton("true");
+        r1f = new JRadioButton("false");
+        r2t = new JRadioButton("true");
+        r2f = new JRadioButton("false");
+
+        g1 = new ButtonGroup();
+        g1.add(r1t);
+        g1.add(r1f);
+        g2 = new ButtonGroup();
+        g2.add(r2t);
+        g2.add(r2f);
+
+        add(l1);
+        add(r1t);
+        add(r1f);
+        add(l2);
+        add(r2t);
+        add(r2f);
+ok=new JButton("ok");
+        ok.addActionListener(this);
+        add(ok);
+    }
+
+    public static void main(String[] args) {
+
+        new Actionlisten();
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent a) {
+        if (r1t.isSelected() && r2f.isSelected()) {
+            JOptionPane.showMessageDialog(this, "pass");
+        } else {
+            JOptionPane.showMessageDialog(this, "fail");
+
+        }
+
+    }
+
+}

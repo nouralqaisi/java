@@ -1,0 +1,31 @@
+import javax.swing.*;
+import java.awt.*;
+public class textfield extends JFrame {
+private TextField name;
+private TextField age;
+textfield(){
+this.setTitle("example");
+this.setSize(700, 600);
+this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+this.setResizable(false);
+TextField name= new TextField("write you name");
+TextField age= new TextField("write you age");
+    setLayout(null);
+Dimension size11=name.getPreferredSize();
+Dimension size12=age.getPreferredSize();
+name.setBounds(100, 20, 100, 35);
+age.setBounds(100, 60, 100, 35);
+age.setEditable(false);
+add(name);
+add(age);
+this.setVisible(true);}
+        
+        
+        
+        
+        
+    public static void main(String[] args) {
+        new textfield();
+    }
+    
+}

@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+public class CreatingNewFrame {
+
+    public static void main(String[] args) {
+        JFrame Frame = new JFrame("Name Of Frame");
+        Frame.setSize(10000, 10000);
+        Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Frame.setVisible(true);
+       
+    }
+    
+}

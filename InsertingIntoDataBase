@@ -1,0 +1,7 @@
+create table employee (Fname VARCHAR(5),Lname VARCHAR(5),ID integer not null);
+insert into employee values ('name 1','lname 1',20000);
+insert into employee values ('name 2','lname 2',333);
+insert into employee values ('name 3','lname 3',55);
+insert into employee values ('name 4','lname 4',77);
+
+select *  from employee 

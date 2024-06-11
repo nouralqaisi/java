@@ -1,0 +1,35 @@
+import java.awt.*;
+import javax.swing.*;
+public class grid extends JFrame {
+    private JButton j1,j2,j3,j4,j5;
+public grid(){
+this.setTitle("grid");
+this.setSize(400, 400);
+this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+this.setResizable(false);
+this.setLocationRelativeTo(null);
+FlowLayout f= new FlowLayout();
+GridLayout g1= new GridLayout(3,2);
+GridLayout g2= new GridLayout(2,3);
+    setLayout(g2);
+j1=new JButton("1");
+j2=new JButton("2");
+j3=new JButton("3");
+j4=new JButton("4");
+j5=new JButton("5");
+add(j1);
+add(j2);
+add(j3);
+add(j4);
+add(j5);
+this.setVisible(true);
+
+}
+    public static void main(String[] args) {
+   
+    new grid();
+    
+    
+    }
+    
+}

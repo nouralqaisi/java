@@ -1,0 +1,69 @@
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+public class Calc extends JFrame implements ActionListener{
+private JTextField x,y;
+private JLabel result;
+private JButton sum,mul;
+Calc(){
+this.setSize(200,500);
+this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+this.setResizable(false);
+this.setLocationRelativeTo(null);
+this.setLayout(new FlowLayout());
+
+x= new JTextField(20);
+y=new JTextField(20);
+sum=new JButton("+");
+mul=new JButton("*");
+result=new JLabel("result");
+sum.addActionListener(this);
+mul.addActionListener(this);
+add(x);
+add(y);
+add(sum);
+add(mul);
+add(result);
+
+
+
+this.setVisible(true);
+
+}
+
+
+
+
+
+    public static void main(String[] args) {
+new Calc();
+
+
+
+    
+    
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+ Object obj= e.getSource();
+double first= Double.valueOf(x.getText());
+double second= Double.valueOf(y.getText());
+double sum1 = first+second;
+double mul1= first*second;
+if (obj.equals(sum)){
+
+result.setText("result is "+String.valueOf(sum1));
+
+
+}
+else{
+
+result.setText("result is "+String.valueOf(mul1));
+
+
+}
+    }
+    
+}

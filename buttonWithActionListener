@@ -1,0 +1,31 @@
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+
+public class Action extends JFrame implements ActionListener{
+private JButton ok;
+public Action(){
+this.setSize(200,300);
+this.setResizable(false);
+this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+this.setLayout(new FlowLayout());
+
+ok=new JButton ("click me");
+ok.addActionListener(this);
+add(ok);
+this.setVisible(true);
+
+}
+
+    public static void main(String[] args) {
+
+new Action();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        JOptionPane.showMessageDialog(null, "ohh you clicked meee");
+    }
+    
+}

@@ -1,0 +1,23 @@
+import java.sql.*; 
+import javax.swing.*; 
+import java.io.*; 
+import java.util.Properties; 
+import java.sql.Connection; 
+import java.sql.DriverManager; 
+import java.sql.SQLException; 
+import java.util.Properties; 
+public class Connect { 
+    public static Connection connect() { 
+        try { 
+            Connection con = 
+DriverManager.getConnection("jdbc:derby://localhost:1527/Employee;create=true", "THE USER NAME", "YOUR PASSWORD"); 
+            JOptionPane.showMessageDialog(null, "connected"); 
+            return con; 
+        } catch (Exception e) { 
+            JOptionPane.showMessageDialog(null, "can't connect to database" + e); 
+        } 
+        return null; 
+    } 
+    public static void main(String[] args) { 
+        Connect.connect();    } 
+}

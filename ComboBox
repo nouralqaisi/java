@@ -1,0 +1,41 @@
+import java.awt.*;
+import javax.swing.*;
+public class combo extends JFrame {
+    private JTextField t1,t2,t3;
+    private JComboBox c1;
+    private JLabel l1,l2;
+public combo(){
+this.setTitle("combo");
+this.setSize(400, 400);
+this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+this.setResizable(false);
+this.setLocationRelativeTo(null);
+
+this.setLayout(new FlowLayout());
+l1=new JLabel("ENTER YOUR NAME");
+l2=new JLabel("your number");
+t1= new JTextField("name");
+t2=new JTextField(40);
+t3=new JTextField("your num",16);
+String [] a= {"a","b","c"};
+c1=new JComboBox(a);
+add(l1);
+add(t1);
+add(t2);
+add(l2);
+add(t3);
+add(c1);
+    
+        
+        
+     this.setVisible(true);   }
+    public static void main(String[] args) {
+
+new combo();
+
+
+
+
+    }
+    
+}

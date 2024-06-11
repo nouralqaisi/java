@@ -1,0 +1,8 @@
+CREATE TABLE books (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    genre VARCHAR(100),
+    publication_year INT,
+    ISBN VARCHAR(20) UNIQUE NOT NULL
+)

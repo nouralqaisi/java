@@ -1,0 +1,19 @@
+import java.awt.*;
+import javax.swing.*;
+public class JavaApplication70 {
+
+  
+    public static void main(String[] args) {
+        TextArea textarea=new TextArea();
+        JButton jb=new JButton("click me");
+        JFrame frame=new JFrame("Hello World");
+        frame.setLayout(new BorderLayout());
+        frame.add(textarea,BorderLayout.CENTER);
+        frame.add(jb,BorderLayout.SOUTH);
+        frame.setSize(200, 440);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setVisible(true);
+
+    }
+    
+}

@@ -1,0 +1,26 @@
+import javax.swing.*;
+
+public class jt extends JFrame {
+
+    JTable j;
+
+    public jt() {
+        this.setName("table");
+        String[][] Data = {
+            {"name 1", "name 12", "age 2"}, {"name 2", "name 22", "age 2"}};
+        String[] colums = {"Fname", "Lname", "age"};
+        j = new JTable(Data, colums);
+        j.setBounds(30, 40, 200, 300);
+       JScrollPane sp = new JScrollPane(j);
+       this.add(sp);
+        this.setSize(500, 200);
+
+        this.setVisible(true);
+
+    }
+
+    public static void main(String[] args) {
+new jt();
+    }
+
+}
